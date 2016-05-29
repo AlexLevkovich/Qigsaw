@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/">
+        <file>pics/about.png</file>
+        <file>pics/cancel.png</file>
+        <file>pics/checked.png</file>
+        <file>pics/filenew.png</file>
+        <file>pics/fileopen.png</file>
+        <file>pics/filesave.png</file>
+        <file>pics/fit.png</file>
+        <file>pics/help.png</file>
+        <file>pics/hint.png</file>
+        <file>pics/info.png</file>
+        <file>pics/preview.png</file>
+        <file>pics/transparent.png</file>
+        <file>pics/viewpic.png</file>
+        <file>audio/click.wav</file>
+        <file>pics/sound.png</file>
+        <file>txt/copying_en</file>
+        <file>txt/copying_ru</file>
+    </qresource>
+</RCC>

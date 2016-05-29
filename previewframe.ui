@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PreviewFrame</class>
+ <widget class="QMainWindow" name="PreviewFrame">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Preview</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="margin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>798</width>
+         <height>545</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="toolButtonStyle">
+    <enum>Qt::ToolButtonTextBesideIcon</enum>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionClose"/>
+   <addaction name="separator"/>
+   <addaction name="actionFitToPage"/>
+  </widget>
+  <action name="actionClose">
+   <property name="icon">
+    <iconset>
+     <normaloff>:/pics/cancel.png</normaloff>:/pics/cancel.png</iconset>
+   </property>
+   <property name="text">
+    <string>Close</string>
+   </property>
+   <property name="toolTip">
+    <string>Close preview</string>
+   </property>
+  </action>
+  <action name="actionFitToPage">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>:/pics/fit.png</normaloff>:/pics/fit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Fit to page</string>
+   </property>
+   <property name="toolTip">
+    <string>Fit picture to page</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

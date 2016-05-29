@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindowClass</class>
+ <widget class="QMainWindow" name="MainWindowClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>596</width>
+    <height>396</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Qigsaw</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="qigsaw.qrc">
+    <normaloff>:/pics/info.png</normaloff>:/pics/info.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="margin">
+     <number>0</number>
+    </property>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QScrollArea" name="scrollArea">
+        <property name="widgetResizable">
+         <bool>false</bool>
+        </property>
+        <widget class="QWidget" name="scrollAreaWidgetContents">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>596</width>
+           <height>322</height>
+          </rect>
+         </property>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>596</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuView">
+    <property name="title">
+     <string>View</string>
+    </property>
+    <widget class="QMenu" name="menuShuffle">
+     <property name="title">
+      <string>Shuffle</string>
+     </property>
+     <addaction name="actionFree_center"/>
+     <addaction name="actionNo_rotations"/>
+     <addaction name="actionDisorder"/>
+     <addaction name="actionBy_color"/>
+    </widget>
+    <addaction name="actionPreview"/>
+    <addaction name="actionAudio"/>
+    <addaction name="actionImage"/>
+    <addaction name="actionPuzzles"/>
+    <addaction name="actionHint"/>
+    <addaction name="actionAutoscroll"/>
+    <addaction name="menuShuffle"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionBackground"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionInfo"/>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuView"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNew"/>
+   <addaction name="actionOpen"/>
+   <addaction name="actionSave"/>
+   <addaction name="separator"/>
+   <addaction name="actionImage"/>
+   <addaction name="actionPreview"/>
+   <addaction name="actionHint"/>
+   <addaction name="separator"/>
+   <addaction name="actionAbout"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionNew">
+   <property name="icon">
+    <iconset resource="qigsaw.qrc">
+     <normaloff>:/pics/filenew.png</normaloff>:/pics/filenew.png</iconset>
+   </property>
+   <property name="text">
+    <string>New</string>
+   </property>
+   <property name="toolTip">
+    <string>Start new jigsaw</string>
+   </property>
+   <property name="statusTip">
+    <string>Start new jigsaw</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="qigsaw.qrc">
+     <normaloff>:/pics/fileopen.png</normaloff>:/pics/fileopen.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="toolTip">
+    <string>Open saved game</string>
+   </property>
+   <property name="statusTip">
+    <string>Open saved game</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="qigsaw.qrc">
+     <normaloff>:/pics/filesave.png</normaloff>:/pics/filesave.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="toolTip">
+    <string>Save the game</string>
+   </property>
+   <property name="statusTip">
+    <string>Save the game</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="toolTip">
+    <string>Exit from the game</string>
+   </property>
+   <property name="statusTip">
+    <string>Exit from the game</string>
+   </property>
+  </action>
+  <action name="actionPreview">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="qigsaw.qrc">
+     <normaloff>:/pics/preview.png</normaloff>:/pics/preview.png</iconset>
+   </property>
+   <property name="text">
+    <string>Preview...</string>
+   </property>
+   <property name="toolTip">
+    <string>Image preview</string>
+   </property>
+   <property name="statusTip">
+    <string>Image preview</string>
+   </property>
+  </action>
+  <action name="actionImage">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="qigsaw.qrc">
+     <normaloff>:/pics/viewpic.png</normaloff>:/pics/viewpic.png</iconset>
+   </property>
+   <property name="text">
+    <string>Image</string>
+   </property>
+   <property name="toolTip">
+    <string>Show image</string>
+   </property>
+   <property name="statusTip">
+    <string>Show image</string>
+   </property>
+  </action>
+  <action name="actionPuzzles">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Puzzles</string>
+   </property>
+   <property name="toolTip">
+    <string>Show/Hide puzzles</string>
+   </property>
+   <property name="statusTip">
+    <string>Show/Hide puzzles</string>
+   </property>
+  </action>
+  <action name="actionHint">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="qigsaw.qrc">
+     <normaloff>:/pics/hint.png</normaloff>:/pics/hint.png</iconset>
+   </property>
+   <property name="text">
+    <string>Hint</string>
+   </property>
+   <property name="toolTip">
+    <string>Show a hint</string>
+   </property>
+   <property name="statusTip">
+    <string>Show a hint</string>
+   </property>
+  </action>
+  <action name="actionFree_center">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Free center</string>
+   </property>
+   <property name="toolTip">
+    <string>Shuffle the puzzles to free center</string>
+   </property>
+   <property name="statusTip">
+    <string>Shuffle the puzzles to free center</string>
+   </property>
+  </action>
+  <action name="actionNo_rotations">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>No rotations</string>
+   </property>
+   <property name="toolTip">
+    <string>Make rotation angle equals 0</string>
+   </property>
+   <property name="statusTip">
+    <string>Make rotation angle equals 0</string>
+   </property>
+  </action>
+  <action name="actionDisorder">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Disorder</string>
+   </property>
+   <property name="toolTip">
+    <string>Shuffle by random order</string>
+   </property>
+   <property name="statusTip">
+    <string>Shuffle by random order</string>
+   </property>
+  </action>
+  <action name="actionBy_color">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>By color</string>
+   </property>
+   <property name="toolTip">
+    <string>Shuffle by color</string>
+   </property>
+   <property name="statusTip">
+    <string>Shuffle by color</string>
+   </property>
+  </action>
+  <action name="actionBackground">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Background...</string>
+   </property>
+   <property name="toolTip">
+    <string>Set background color</string>
+   </property>
+   <property name="statusTip">
+    <string>Set background color</string>
+   </property>
+  </action>
+  <action name="actionInfo">
+   <property name="icon">
+    <iconset resource="qigsaw.qrc">
+     <normaloff>:/pics/info.png</normaloff>:/pics/info.png</iconset>
+   </property>
+   <property name="text">
+    <string>Info...</string>
+   </property>
+   <property name="toolTip">
+    <string>Show info about game controls</string>
+   </property>
+   <property name="statusTip">
+    <string>Show info about game controls</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="qigsaw.qrc">
+     <normaloff>:/pics/help.png</normaloff>:/pics/help.png</iconset>
+   </property>
+   <property name="text">
+    <string>About...</string>
+   </property>
+   <property name="toolTip">
+    <string>About the game</string>
+   </property>
+   <property name="statusTip">
+    <string>About the game</string>
+   </property>
+  </action>
+  <action name="actionAudio">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="qigsaw.qrc">
+     <normaloff>:/pics/sound.png</normaloff>:/pics/sound.png</iconset>
+   </property>
+   <property name="text">
+    <string>Audio</string>
+   </property>
+   <property name="toolTip">
+    <string>Start/Stop using the audio events</string>
+   </property>
+   <property name="statusTip">
+    <string>Start/Stop using the audio events</string>
+   </property>
+  </action>
+  <action name="actionAutoscroll">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Autoscroll</string>
+   </property>
+   <property name="statusTip">
+    <string>Enable/Disable auto scrolling of the main window</string>
+   </property>
+   <property name="whatsThis">
+    <string>Enable/Disable auto scrolling of the main window</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="qigsaw.qrc"/>
+ </resources>
+ <connections/>
+</ui>
